@@ -1,10 +1,7 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin } from "lucide-react";
-
 const About = () => {
-  return (
-    <section id="about" className="py-20 bg-white">
+  return <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
@@ -24,8 +21,8 @@ const About = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Contact Information</h3>
                   <div className="space-y-2 text-gray-700">
-                    <p>📧 simon.das@email.com</p>
-                    <p>📱 +880 123 456 789</p>
+                    <p>📧 sd.simon.das@gmail.com</p>
+                    <p>📱 +880 1626 100 890</p>
                     <p>📍 Dhaka, Bangladesh</p>
                   </div>
                 </div>
@@ -48,8 +45,6 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
