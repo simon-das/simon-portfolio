@@ -1,78 +1,73 @@
 
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
+import { ExternalLink, Award } from "lucide-react";
 
 const Certifications = () => {
   const certifications = [
     {
       title: "Big Data & Hadoop",
-      provider: "Technology Provider",
-      year: "2023",
-      category: "Data Science"
+      provider: "Industry Certification",
+      description: "Comprehensive training in big data processing and Hadoop ecosystem",
+      year: "2023"
     },
     {
       title: "Intermediate Machine Learning",
-      provider: "Learning Platform",
-      year: "2023",
-      category: "Machine Learning"
+      provider: "Kaggle",
+      description: "Advanced machine learning techniques and model optimization",
+      year: "2022"
     },
     {
       title: "Cloud Workshop",
-      provider: "Cloud Provider",
-      year: "2022",
-      category: "Cloud Computing"
+      provider: "AWS/Azure",
+      description: "Cloud computing fundamentals and deployment strategies",
+      year: "2022"
     },
     {
       title: "Software Development Processes",
-      provider: "Professional Institute",
-      year: "2022",
-      category: "Software Engineering"
+      provider: "Professional Development",
+      description: "Agile methodologies and software engineering best practices",
+      year: "2021"
     },
     {
       title: "MongoDB with Python",
-      provider: "Database Institute",
-      year: "2021",
-      category: "Database"
+      provider: "MongoDB University",
+      description: "NoSQL database design and Python integration",
+      year: "2021"
     }
   ];
 
-  const getCategoryColor = (category: string) => {
-    const colors: { [key: string]: string } = {
-      "Data Science": "bg-blue-100 text-blue-800",
-      "Machine Learning": "bg-green-100 text-green-800",
-      "Cloud Computing": "bg-purple-100 text-purple-800",
-      "Software Engineering": "bg-orange-100 text-orange-800",
-      "Database": "bg-gray-100 text-gray-800"
-    };
-    return colors[category] || "bg-gray-100 text-gray-800";
-  };
-
   return (
-    <section id="certifications" className="py-20 bg-white">
+    <section id="certifications" className="py-20 bg-muted/50">
       <div className="container mx-auto px-6">
         <div className="max-w-6xl mx-auto">
-          <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
+          <h2 className="text-4xl font-bold text-center text-foreground mb-12">
             Certifications
           </h2>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {certifications.map((cert, index) => (
-              <Card key={index} className="shadow-lg border-0 hover:shadow-xl transition-all duration-300 hover:scale-105 bg-white">
+              <Card key={index} className="hover:shadow-lg transition-all duration-300 border-0">
                 <CardContent className="p-6">
-                  <div className="flex items-center justify-between mb-3">
-                    <Badge className={getCategoryColor(cert.category)}>
-                      {cert.category}
+                  <div className="flex items-start gap-3 mb-4">
+                    <div className="p-2 bg-primary/10 rounded-full flex-shrink-0">
+                      <Award className="w-5 h-5 text-primary" />
+                    </div>
+                    <div className="flex-1">
+                      <h3 className="text-lg font-bold text-foreground mb-1">{cert.title}</h3>
+                      <p className="text-primary font-semibold text-sm">{cert.provider}</p>
+                    </div>
+                    <Badge variant="secondary" className="text-xs">
+                      {cert.year}
                     </Badge>
-                    <span className="text-sm text-gray-500">{cert.year}</span>
                   </div>
                   
-                  <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                    {cert.title}
-                  </h3>
+                  <p className="text-muted-foreground text-sm mb-4">{cert.description}</p>
                   
-                  <p className="text-gray-600">
-                    {cert.provider}
-                  </p>
+                  <button className="flex items-center gap-2 text-primary hover:text-primary/80 transition-colors text-sm">
+                    <ExternalLink className="w-4 h-4" />
+                    View Certificate
+                  </button>
                 </CardContent>
               </Card>
             ))}
