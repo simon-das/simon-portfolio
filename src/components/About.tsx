@@ -1,7 +1,10 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Github, Linkedin } from "lucide-react";
+
 const About = () => {
-  return <section id="about" className="py-20 bg-white">
+  return (
+    <section id="about" className="py-20 bg-white">
       <div className="container mx-auto px-6">
         <div className="max-w-4xl mx-auto">
           <h2 className="text-4xl font-bold text-center text-gray-900 mb-12">
@@ -30,11 +33,11 @@ const About = () => {
                 <div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-4">Connect with Me</h3>
                   <div className="flex space-x-4">
-                    <a href="#" className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors">
+                    <a href="https://www.linkedin.com/in/simondas/" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-blue-600 hover:text-blue-800 transition-colors">
                       <Linkedin className="w-5 h-5" />
                       <span>LinkedIn</span>
                     </a>
-                    <a href="#" className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors">
+                    <a href="https://github.com/simon-das" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-2 text-gray-700 hover:text-gray-900 transition-colors">
                       <Github className="w-5 h-5" />
                       <span>GitHub</span>
                     </a>
@@ -45,6 +48,8 @@ const About = () => {
           </Card>
         </div>
       </div>
-    </section>;
+    </section>
+  );
 };
+
 export default About;

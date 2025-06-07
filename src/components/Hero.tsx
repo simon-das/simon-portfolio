@@ -30,12 +30,9 @@ const Hero = () => {
             Building intelligent, user-centered AI systems with a focus on conversational interfaces and data-driven solutions.
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <div className="flex justify-center">
             <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
               Download CV
-            </Button>
-            <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50 px-8 py-3 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-              Contact Me
             </Button>
           </div>
         </div>
